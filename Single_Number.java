@@ -1,3 +1,6 @@
+/**
+ * Given an array of integers, every element appears twice except for one. Find that single one.
+ */
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
