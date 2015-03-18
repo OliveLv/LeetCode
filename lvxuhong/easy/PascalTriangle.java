@@ -21,13 +21,13 @@ public class PascalTriangle {
 	        	pascal.add(row1);
 	        	row=row1;
 	        }
-	       /* for(int i=0;i<numRows;i++){
+	        for(int i=0;i<numRows;i++){
 	        	row=pascal.get(i);
 	        	for(Integer ele:row){
 	        		System.out.print(ele+" ");
 	        	}
 	        	System.out.println();
-	        }*/
+	        }
 	        return pascal;
 	    }
 	 public static void main(String []args){
