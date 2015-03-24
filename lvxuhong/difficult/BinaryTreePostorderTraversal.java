@@ -54,9 +54,9 @@ public class BinaryTreePostorderTraversal {
 		 }
 		*/
 		 postorderTraversal(root,order);
-		  for(int ele:order){
+		  /*for(int ele:order){
 		     	System.out.print(ele+" ");
-		     }
+		     }*/
 	       return order; 
 	    }
 	 public void postorderTraversal(TreeNode root,List<Integer>order){

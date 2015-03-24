@@ -13,7 +13,8 @@ public class MinimumDepthOfBinaryTree {
 	    }
 	 public int deepth(TreeNode root){
 			if(root==null)return 0;
-			int l=0,r=0;
+			int l=Integer.MAX_VALUE,r=Integer.MAX_VALUE;
+			if(root.left==null&&root.right==null)return 1;
 			if(root.left!=null){
 				l=deepth(root.left);
 			}

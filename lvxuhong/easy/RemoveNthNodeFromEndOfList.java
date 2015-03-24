@@ -24,7 +24,7 @@ public class RemoveNthNodeFromEndOfList {
 			q = q.next;
 		}
 		if (q==null&&i != n) {
-			System.out.println("yes");
+			//System.out.println("yes");
 			return head;
 		}
 		while (q != null) {
