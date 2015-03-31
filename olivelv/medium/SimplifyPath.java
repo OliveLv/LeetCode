@@ -1,5 +1,7 @@
 package olivelv.medium;
 
+import java.util.Stack;
+
 /**
  * Given an absolute path for a file (Unix-style), simplify it.
  * 
@@ -10,14 +12,19 @@ package olivelv.medium;
  * @version time: 2015年3月31日 下午7:12:36
  */
 public class SimplifyPath {
+	//not deal
 	public String simplifyPath(String path) {
 		String []paths=path.split("/");
-		//System.out.println(paths.length);
-        return "/"+paths[paths.length-1];
+        Stack<String> stack = new Stack<String>();
+		for(String s:paths){
+			if(s.equals("..")&&!stack.isEmpty())stack.pop();
+			else if(!s.equals(".")&&!s.equals("..")&&!s.equals(""))stack.push(s);
+		}
+		 return "/" + String.join("/", stack);
 	}
 	public static void main(String []args){
 		SimplifyPath test=new SimplifyPath();
-		String str="c";
+		String str="/.";
 		System.out.println(test.simplifyPath(str));
 	}
 }
