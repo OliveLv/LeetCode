@@ -3,8 +3,6 @@ package olivelv.medium;
 import java.util.ArrayList;
 import java.util.List;
 
-import olivelv.easy.TreeNode;
-
 /**
  * Given a binary tree, imagine yourself standing on the right side of it,
  * return the values of the nodes you can see ordered from top to bottom.

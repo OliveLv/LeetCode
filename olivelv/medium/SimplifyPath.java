@@ -20,7 +20,8 @@ public class SimplifyPath {
 			if(s.equals("..")&&!stack.isEmpty())stack.pop();
 			else if(!s.equals(".")&&!s.equals("..")&&!s.equals(""))stack.push(s);
 		}
-		 return "/" + String.join("/", stack);
+		return null;
+		// return "/" + String.join("/", stack);
 	}
 	public static void main(String []args){
 		SimplifyPath test=new SimplifyPath();
