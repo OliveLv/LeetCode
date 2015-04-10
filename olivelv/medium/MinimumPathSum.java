@@ -44,7 +44,6 @@ public class MinimumPathSum {
 		return a<b?a:b;
 	}
 	public int minPathSum(int[][] grid) {
-		int min=Integer.MAX_VALUE;
 		int m=grid.length;
 		if(m==0)return 0;
 		int n=grid[0].length;
