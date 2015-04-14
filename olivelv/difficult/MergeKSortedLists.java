@@ -32,6 +32,7 @@ class ListNode{
 	}
 }
 public class MergeKSortedLists {
+	// »á³öÏÖ TLE
 	 public ListNode mergeKLists2(List<ListNode> lists) {
 		 if(lists.isEmpty())return null;
 		 int n=lists.size();
