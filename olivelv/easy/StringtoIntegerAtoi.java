@@ -48,6 +48,7 @@ public class StringtoIntegerAtoi {
 					else
 						break;
 		}
+		
 		if(flag==0)flag=1;
 		if(s.length()==0)return 0;
 		BigInteger val=new BigInteger(s);
