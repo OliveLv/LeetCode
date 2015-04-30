@@ -17,10 +17,9 @@ import java.util.Map;
  * Given "foo", "bar", return false.
  * 
  * Given "paper", "title", return true.
- * 
- * 
+ *
  * @author olivelv
- * @version time: 2015年4月30日 下午9:18:54
+ * @version time: 2015脛锚4脭脗30脠脮 脧脗脦莽9:18:54
  */
 public class IsomorphicStrings {
 	public boolean isIsomorphic(String s, String t) {
