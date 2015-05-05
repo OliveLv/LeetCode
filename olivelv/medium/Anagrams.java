@@ -1,9 +1,12 @@
 package olivelv.medium;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Given an array of strings, return all groups of strings that are anagrams.
@@ -17,30 +20,33 @@ import java.util.Map;
 public class Anagrams {
 	public List<String> anagrams(String[] strs) {
 		List<String>list=new ArrayList<String>();
-		if(strs.length<=1) return list;
+		if(strs.length<=1) return (list);
 		Map<String,String>map=new HashMap<String,String>();
+		Map<String,Integer>map1=new HashMap<String,Integer>();
 		for(String str:strs){
-			if(map.containsKey(str)){
-				list.add(str);
-				list.add(map.get(str));
+			char []tmp=str.toCharArray();
+			Arrays.sort(tmp);
+			String s=new String(tmp);
+			if(!map.containsKey(s)){
+				map.put(s, str);
 			}else{
-				int n=str.length();
-				String s="";
-				for(int i=n-1;i>=0;i--){
-					s+=str.charAt(i);
-				}
-				map.put(str, s);
+				list.add(str);
+				map1.put(s, 1);
 			}
-			list.add(str);
 		}
+		for(String str:map1.keySet()){
+			list.add(map.get(str));
+			
+		}
+		/*System.out.println(list.size());
 		for(String str:list){
 			System.out.println(str);
-		}
-		return list;
+		}*/
+		return (list);
 	}
 	public static void main(String []args){
 		Anagrams test=new Anagrams();
-		String []strs={"a"};
+		String []strs={"and","dan"};
 		test.anagrams(strs);
 	}
 }
