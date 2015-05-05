@@ -1,7 +1,10 @@
 package olivelv.easy;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -16,26 +19,24 @@ import java.util.Stack;
  *
  */
 public class MinStack {
-	List<Integer>stack=new ArrayList<Integer>();
+	Stack<Integer>stack=new Stack<Integer>();
+	Queue<Integer>minstack=new PriorityQueue<Integer>();
 	public void push(int x) {
-         stack.add(x);
+		minstack.add(x);
+         stack.push(x);
 	}
 
 	public void pop() {
-		int l=stack.size();
-        stack.remove(l-1);
+		int val=stack.pop();
+		if(minstack.peek()==val){
+			minstack.poll();
+		}   
 	}
-
 	public int top() {
-		int l=stack.size();
-		return stack.get(l-1);
-       
+		return stack.peek();
 	}
 
 	public int getMin() {
-       int min=Integer.MAX_VALUE;
-       for(int ele:stack)
-    	   if(ele<min)min=ele;
-       return min;
+       return minstack.peek();
 	}
 }
