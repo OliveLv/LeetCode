@@ -19,9 +19,9 @@ import java.util.Queue;
  * @author olivelv
  * @version time: 2015年5月29日 下午8:58:16
  */
-class TrieNode {
+/*class TrieNode {
 	TrieNode[] nexts = new TrieNode[26];
-}
+}*/
 
 public class WordDictionary {
 	TrieNode root = new TrieNode();
