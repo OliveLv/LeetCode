@@ -11,6 +11,7 @@ package olivelv.medium;
  * 
  * @author olivelv
  * @version time: 2015年5月31日 上午9:52:11
+ * 
  */
 public class MinimumSizeSubarraySum {
 	public int minSubArrayLen(int s, int[] nums) {
