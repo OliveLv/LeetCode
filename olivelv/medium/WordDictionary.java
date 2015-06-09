@@ -1,5 +1,4 @@
 package olivelv.medium;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
