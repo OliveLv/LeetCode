@@ -22,15 +22,32 @@ struct ListNode {
 //    }
 //};
 
+//class Solution {
+//public:
+//    void deleteNode(ListNode* node) {
+//		ListNode* p=node->next;
+//		if(p!=NULL){
+//		node->val=p->val;
+//		node->next=p->next;
+//		}
+//		free(p);
+//		
+//
+//    }
+//};
+
+//class Solution {
+//public:
+//    void deleteNode(ListNode* node) {
+//		ListNode* p=node->next;
+//		node->val=p->val;
+//		node->next=p->next;
+//    }
+//};
 class Solution {
 public:
     void deleteNode(ListNode* node) {
-		ListNode* p=node->next;
-		if(p!=NULL){
-		node->val=p->val;
-		node->next=p->next;
-		}
-		free(p);
+		*(node)=*(node->next);
 		
 
     }
