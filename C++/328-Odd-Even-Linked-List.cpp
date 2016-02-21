@@ -49,23 +49,23 @@ public:
 		return odd;
     }
 };
-int main(){
-	Solution test=Solution();
-	ListNode*head=new ListNode(1);
-	ListNode*p=head;
-	p->next=new ListNode(2);
-	p=p->next;
-	p->next=new ListNode(3);
-	p=p->next;
-	p->next=new ListNode(4);
-	p=p->next;
-	p->next=new ListNode(5);
-	p=test.oddEvenList(head);
-	while(p!=NULL){
-		cout<<p->val<<" ";
-		p=p->next;
-	}
-	cout<<endl;
-	system("pause");
-	return 0;
-}
+//int main(){
+//	Solution test=Solution();
+//	ListNode*head=new ListNode(1);
+//	ListNode*p=head;
+//	p->next=new ListNode(2);
+//	p=p->next;
+//	p->next=new ListNode(3);
+//	p=p->next;
+//	p->next=new ListNode(4);
+//	p=p->next;
+//	p->next=new ListNode(5);
+//	p=test.oddEvenList(head);
+//	while(p!=NULL){
+//		cout<<p->val<<" ";
+//		p=p->next;
+//	}
+//	cout<<endl;
+//	system("pause");
+//	return 0;
+//}

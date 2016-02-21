@@ -32,10 +32,10 @@ public:
         return (int)sqrt(n);
     }
 };
-int main(){
-	Solution test=Solution();
-	for(int i=1;i<=50;i++)
-	cout<<test.bulbSwitch(i)<<endl;
-	system("pause");
-	return 0;
-}
+//int main(){
+//	Solution test=Solution();
+//	for(int i=1;i<=50;i++)
+//	cout<<test.bulbSwitch(i)<<endl;
+//	system("pause");
+//	return 0;
+//}
