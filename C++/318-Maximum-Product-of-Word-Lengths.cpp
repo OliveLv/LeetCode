@@ -27,10 +27,13 @@ public:
 		// 'vector<int>res' costs 20ms more than using 'int*res=new int[n]'
 		//vector<int>res=vector<int>(n,0);
 		int*res=new int[n];
+		// using array len to store the length of words,it can improve the time.
+		int*len=new int[n];
 		for(int i=0;i<n;i++){
 			//string word=words[i];
 			//transform(word.begin(),word.end(),word.begin(),::tolower);
 			res[i]=0;
+			len[i]=words[i].size();
 			int l=words[i].size();
 			for(int j=0;j<l;j++){
 				res[i]|=1<<(words[i][j]-'a');
@@ -42,7 +45,7 @@ public:
 		for(int i=0;i<n;i++){
 			for(int j=i+1;j<n;j++)
 				if(!(res[i]&res[j])){
-					int tmp=words[i].length()*words[j].length();
+					int tmp=len[i]*len[j];
 					if(max<tmp)max=tmp;
 				}
 		}
