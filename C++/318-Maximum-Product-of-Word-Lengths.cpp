@@ -23,19 +23,20 @@ class Solution {
 public:
     int maxProduct(vector<string>& words) {
 		int n=words.size();
-		if(n==0)return 0;
-		vector<int>res=vector<int>(n,0);
+		if(n<2)return 0;
+		// 'vector<int>res' costs 20ms more than using 'int*res=new int[n]'
+		//vector<int>res=vector<int>(n,0);
+		int*res=new int[n];
 		for(int i=0;i<n;i++){
-			string word=words[i];
-			transform(word.begin(),word.end(),word.begin(),::tolower);
-			int l=word.size();
-			int bit=0;
+			//string word=words[i];
+			//transform(word.begin(),word.end(),word.begin(),::tolower);
+			res[i]=0;
+			int l=words[i].size();
 			for(int j=0;j<l;j++){
-				int tmp=(int)pow(2,word[j]-'a');
-				bit|=tmp;
+				res[i]|=1<<(words[i][j]-'a');
 			}
-			res[i]=bit;
-			cout<<bit<<endl;
+			//res[i]=bit;
+			//cout<<bit<<endl;
 		}
 		int max=0;
 		for(int i=0;i<n;i++){
@@ -48,17 +49,17 @@ public:
 		return max;
     }
 };
-int main(){
-	vector<string>v;
-	int n;
-	cin>>n;
-	for(int i=0;i<n;i++){
-		string tmp;
-		cin>>tmp;
-		v.push_back(tmp);
-	}
-	Solution test=Solution();
-	cout<<test.maxProduct(v)<<endl;
-	system("pause");
-	return 0;
-}
+//int main(){
+//	vector<string>v;
+//	int n;
+//	cin>>n;
+//	for(int i=0;i<n;i++){
+//		string tmp;
+//		cin>>tmp;
+//		v.push_back(tmp);
+//	}
+//	Solution test=Solution();
+//	cout<<test.maxProduct(v)<<endl;
+//	system("pause");
+//	return 0;
+//}
