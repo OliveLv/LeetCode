@@ -5,6 +5,8 @@
 #include<cmath>
 #include<iostream>
 #include<stdio.h>
+#include <fstream>
+#include<set>
 using namespace std;
 // loop
 //class Solution {
@@ -30,19 +32,29 @@ using namespace std;
 //		return true;
 //    }
 //};
+//class Solution {
+//public:
+//    bool isPowerOfThree(int n) {
+//		if(n==0)return false;
+//		return fmod(log10(n)/log10(3),1)==0;
+//    }
+//};
+#define N 0x7fffffff
 class Solution {
 public:
     bool isPowerOfThree(int n) {
-		if(n==0)return false;
-		return fmod(log10(n)/log10(3),1)==0;
+		int list[]={1, 3, 9, 27, 81, 243, 729, 2187, 6561, 19683, 59049, 177147, 531441, 1594323, 4782969, 14348907, 43046721, 129140163, 387420489, 1162261467};
+		set<int>s(list,list+20);
+		return s.find(n)!=s.end();
     }
 };
-int main(){
-	Solution test=Solution();
-	int n;
-	while(1){
-		cin>>n;
-		cout<<test.isPowerOfThree(n)<<endl;
-	}
-	return 0;
-}
+
+//int main(){
+//	Solution test=Solution();
+//	int n;
+//	while(1){
+//		cin>>n;
+//		cout<<test.isPowerOfThree(n)<<endl;
+//	}
+//	return 0;
+//}
