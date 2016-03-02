@@ -1,7 +1,7 @@
 package olivelv.medium;
 
 import java.util.Stack;
-
+// 3ms
 public class ReverseLinkedList {
 	public ListNode reverseList(ListNode head) {
 		if(head==null)return head;
@@ -18,4 +18,19 @@ public class ReverseLinkedList {
 		}
 		return head;
 	}
+}
+// 0ms
+public class Solution {
+   public ListNode reverseList(ListNode head) {
+        if(head==null)return head;
+        ListNode p=head;
+        ListNode root=new ListNode(0);
+        while(p!=null){
+            ListNode q=p.next;
+            p.next=root.next;
+            root.next=p;
+            p=q;
+        }
+        return root.next;
+    }
 }
