@@ -3,7 +3,7 @@
 // @return -1 if my number is lower, 1 if my number is higher, otherwise return 0
 int guess(int num);
 /**
-ÌØÀı
+ç‰¹ä¾‹
 2126753390
 1702766719
 **/
